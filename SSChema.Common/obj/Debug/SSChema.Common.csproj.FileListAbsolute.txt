@@ -1,0 +1,5 @@
+E:\Do\SSchema\SSChema.Common\bin\Debug\SSChema.Common.dll
+E:\Do\SSchema\SSChema.Common\bin\Debug\SSChema.Common.pdb
+E:\Do\SSchema\SSChema.Common\obj\Debug\ResolveAssemblyReference.cache
+E:\Do\SSchema\SSChema.Common\obj\Debug\SSChema.Common.dll
+E:\Do\SSchema\SSChema.Common\obj\Debug\SSChema.Common.pdb

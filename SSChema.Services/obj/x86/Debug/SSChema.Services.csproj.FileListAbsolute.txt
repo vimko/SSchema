@@ -1,0 +1,14 @@
+E:\Do\SSchema\SSChema.Services\bin\Debug\SSChema.Services.exe
+E:\Do\SSchema\SSChema.Services\bin\Debug\SSChema.Services.pdb
+E:\Do\SSchema\SSChema.Services\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Do\SSchema\SSChema.Services\obj\x86\Debug\SSChema.Services.ProjectInstaller.resources
+E:\Do\SSchema\SSChema.Services\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+E:\Do\SSchema\SSChema.Services\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+E:\Do\SSchema\SSChema.Services\obj\x86\Debug\SSChema.Services.exe
+E:\Do\SSchema\SSChema.Services\obj\x86\Debug\SSChema.Services.pdb
+E:\Do\SSchema\SSChema.Services\obj\x86\Debug\SSChema.Services.PostSaleOrders.resources
+E:\Do\SSchema\SSChema.Services\bin\Debug\SSChema.Services.exe.config
+E:\Do\SSchema\Debug\SSChema.Services.exe.config
+E:\Do\SSchema\Debug\SSChema.Services.exe
+E:\Do\SSchema\Debug\SSChema.Services.pdb
+E:\Do\SSchema\Debug\NLog.config
