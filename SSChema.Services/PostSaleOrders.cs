@@ -13,10 +13,18 @@ namespace SSChema.Services
 {
     public partial class PostSaleOrders : ServiceBase
     {
-        
+        private System.Timers.Timer timer;
+        private Common.CreateTimer createTimer;
+        private DoServices.DoSendDataByPost sendData;
+
         public PostSaleOrders()
         {
             InitializeComponent();
+
+            createTimer = new Common.CreateTimer();
+            timer = createTimer.HTimer;
+
+            sendData = new DoServices.DoSendDataByPost();
         }
 
         protected override void OnStart(string[] args)
@@ -26,6 +34,8 @@ namespace SSChema.Services
             servicethread.IsBackground = true;
             servicethread.Name = "servicethread";
             servicethread.Start();
+
+            
         }
 
         /// <summary>
@@ -33,69 +43,29 @@ namespace SSChema.Services
         /// </summary>
         private void DoServerice()
         {
-            Logger logger = LogManager.GetLogger("file");
-
             try
             {
-                System.Timers.Timer timer = new System.Timers.Timer();
-
-                if (ConfigAppSettingHelper.PlanpleverydayType == "2")
-                {
-                    int times = Convert.ToInt32( ConfigAppSettingHelper.PlaneverydaytwoTimes);
-
-                    logger.Info(times.ToString());
-
-                    switch (ConfigAppSettingHelper.PlaneverydaytwotimesType)
-                    {
-                        case "秒":
-                            timer.Interval = times * 1000;
-                            break;
-                        case "每分":
-                            timer.Interval = times * 60 * 1000;
-                            break;
-                        case "每时":
-                            timer.Interval = times * 3600 * 1000;
-                            break;
-                        default:
-                            timer.Interval = 1000;
-                            break;
-
-                    }
-
-                }
-                else
-                    timer.Interval = 1000;
-
-                
-                logger.Info(string.Format("时间间隔：{0}",timer.Interval));
-
                 timer.Elapsed += new System.Timers.ElapsedEventHandler(timer_Elapsed);
                 timer.Enabled = true;
+          
             }
             catch (Exception ex)
             {
-                logger.Error(ex.Message);
+
             }
 
         }
 
         void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
-            DateTime now = DateTime.Now;
 
-            //判断是否在执行时间断内
-            //if (now.CompareTo(DateTime.Parse(ConfigAppSettingHelper.PlancxBDate)) < 0) return;
-
-            //if(ConfigAppSettingHelper.PlancxType == "1")
-            //    if (now.CompareTo(DateTime.Parse(ConfigAppSettingHelper.PlancxEDate)) > 0) return;
-
-            Logger logger = LogManager.GetLogger("file");
-            logger.Info(DateTime.Now.ToLongTimeString());
+            if (createTimer.JudgeCurrentTimeWillExec())
+                sendData.Do();
         }
 
         protected override void OnStop()
         {
-            //System.Windows.Forms.MessageBox.Show("服务停止");
+            timer.Close();
         }
     }
 }

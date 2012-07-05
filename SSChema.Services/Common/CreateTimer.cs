@@ -10,6 +10,11 @@ namespace SSChema.Services.Common
     {
         private Timer timer = null;
 
+        public Timer HTimer
+        {
+            get { return timer; }
+        }
+
         private AppSetting appSeeting = null;
 
         /// <summary>
@@ -30,7 +35,7 @@ namespace SSChema.Services.Common
         /// 设置计时器时间间隔
         /// </summary>
         /// <param name="timmer"></param>
-        private void InitTimer(Timer timmer)
+        private void InitTimer(Timer timer)
         {
             try
             {
@@ -58,6 +63,8 @@ namespace SSChema.Services.Common
                 }
                 else
                     timer.Interval = 1000;
+
+                
 
             }
             catch (Exception ex)

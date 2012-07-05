@@ -1,0 +1,5 @@
+E:\Do\SSchema\SSChema.TestWeb\bin\SSChema.TestWeb.dll
+E:\Do\SSchema\SSChema.TestWeb\bin\SSChema.TestWeb.pdb
+E:\Do\SSchema\SSChema.TestWeb\obj\Debug\ResolveAssemblyReference.cache
+E:\Do\SSchema\SSChema.TestWeb\obj\Debug\SSChema.TestWeb.dll
+E:\Do\SSchema\SSChema.TestWeb\obj\Debug\SSChema.TestWeb.pdb

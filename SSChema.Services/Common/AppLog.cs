@@ -17,7 +17,7 @@ namespace SSChema.Services.Common
         public static Logger CreateAppLog()
         {
             if (logger == null)
-                logger = LogManager.GetLogger("AppLog");
+                logger = LogManager.GetLogger("applog");
 
             return AppLog.logger;
         }

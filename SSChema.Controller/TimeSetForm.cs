@@ -283,10 +283,14 @@ namespace SSChema.Controller
                 conf.Save();
 
                 MessageBox.Show("保存成功！", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                DialogResult = System.Windows.Forms.DialogResult.OK;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                DialogResult = System.Windows.Forms.DialogResult.No;
             }
         }
 

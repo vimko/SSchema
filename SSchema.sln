@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSChema.Services", "SSChema
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSChema.Common", "SSChema.Common\SSChema.Common.csproj", "{48646F82-FA7A-4832-9774-7A15054B55F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebServices", "TestWebServices\TestWebServices.csproj", "{88F1A084-88A9-4980-8A5A-8B01FFF96042}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,16 @@ Global
 		{48646F82-FA7A-4832-9774-7A15054B55F2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{48646F82-FA7A-4832-9774-7A15054B55F2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{48646F82-FA7A-4832-9774-7A15054B55F2}.Release|x86.ActiveCfg = Release|Any CPU
+		{88F1A084-88A9-4980-8A5A-8B01FFF96042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88F1A084-88A9-4980-8A5A-8B01FFF96042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88F1A084-88A9-4980-8A5A-8B01FFF96042}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{88F1A084-88A9-4980-8A5A-8B01FFF96042}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{88F1A084-88A9-4980-8A5A-8B01FFF96042}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{88F1A084-88A9-4980-8A5A-8B01FFF96042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88F1A084-88A9-4980-8A5A-8B01FFF96042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88F1A084-88A9-4980-8A5A-8B01FFF96042}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{88F1A084-88A9-4980-8A5A-8B01FFF96042}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{88F1A084-88A9-4980-8A5A-8B01FFF96042}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

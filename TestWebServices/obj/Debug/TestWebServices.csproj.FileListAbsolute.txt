@@ -1,0 +1,5 @@
+E:\Do\SSchema\TestWebServices\bin\TestWebServices.dll
+E:\Do\SSchema\TestWebServices\bin\TestWebServices.pdb
+E:\Do\SSchema\TestWebServices\obj\Debug\ResolveAssemblyReference.cache
+E:\Do\SSchema\TestWebServices\obj\Debug\TestWebServices.dll
+E:\Do\SSchema\TestWebServices\obj\Debug\TestWebServices.pdb

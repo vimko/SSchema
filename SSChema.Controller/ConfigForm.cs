@@ -5,11 +5,19 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.ServiceProcess;
 
 namespace SSChema.Controller
 {
     public partial class ConfigForm : Form
     {
+        //private MainForm mainForm = null;
+        //public MainForm PMainForm
+        //{
+        //    get { return this.mainForm; }
+        //    set { this.mainForm = value; }
+        //}
+
         public ConfigForm()
         {
             InitializeComponent();
@@ -26,7 +34,7 @@ namespace SSChema.Controller
             {
                 string dbinfo = "";
 
-                dbinfo = string.Format("server={0};database=master", this.textBoxServerName.Text.Trim());
+                dbinfo = string.Format("server={0};database={1}", this.textBoxServerName.Text.Trim(),this.textBoxDBName.Text.Trim());
 
                 if (this.comboBoxAuthType.SelectedIndex == 0)
                     dbinfo = string.Format("{0};Integrated Security=SSPI", dbinfo);
@@ -47,11 +55,29 @@ namespace SSChema.Controller
                 conf.Save();
 
                 MessageBox.Show("操作成功！", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //ServiceController sc = new ServiceController("PostSaleOrders");
+
+                //if (this.PMainForm != null)
+                //{
+                //    if (sc.Status == ServiceControllerStatus.Running)
+                //    {
+                //        this.PMainForm.StartOrStopServices();
+                //        this.PMainForm.StartOrStopServices();
+                //    }
+                //    else
+                //    {
+                //        this.PMainForm.StartOrStopServices();
+                //    }
+                //}
+
+                DialogResult = System.Windows.Forms.DialogResult.OK;
             }
             catch (Exception ee)
             {
                 MessageBox.Show("操作失败\n" + ee.Message, "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //throw;
+                DialogResult = System.Windows.Forms.DialogResult.No;
             }
         }
 
@@ -104,6 +130,7 @@ namespace SSChema.Controller
                 }
 
                 this.textBoxServerName.Text = dbDic["server"];
+                this.textBoxDBName.Text = dbDic["database"];
 
                 if (dbDic.ContainsKey("Integrated Security"))
                 {

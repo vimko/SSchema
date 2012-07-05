@@ -30,27 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonOk = new System.Windows.Forms.Button();
-            this.buttonCancle = new System.Windows.Forms.Button();
+            this.comboBoxAuthType = new System.Windows.Forms.ComboBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxDbUserName = new System.Windows.Forms.TextBox();
+            this.textBoxServerName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxServerName = new System.Windows.Forms.TextBox();
-            this.textBoxDbUserName = new System.Windows.Forms.TextBox();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.comboBoxAuthType = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxHttp = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxtoken = new System.Windows.Forms.TextBox();
+            this.textBoxHttp = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.buttonOk = new System.Windows.Forms.Button();
+            this.buttonCancle = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxDBName = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBoxDBName);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.comboBoxAuthType);
             this.groupBox1.Controls.Add(this.textBoxPassword);
             this.groupBox1.Controls.Add(this.textBoxDbUserName);
@@ -61,43 +65,44 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(437, 169);
+            this.groupBox1.Size = new System.Drawing.Size(437, 213);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "数据库配置";
             // 
-            // groupBox2
+            // comboBoxAuthType
             // 
-            this.groupBox2.Controls.Add(this.textBoxtoken);
-            this.groupBox2.Controls.Add(this.textBoxHttp);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(12, 187);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(437, 103);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "其它配置";
+            this.comboBoxAuthType.FormattingEnabled = true;
+            this.comboBoxAuthType.Items.AddRange(new object[] {
+            "Windows 身份验证",
+            "SQL Server 身份验证"});
+            this.comboBoxAuthType.Location = new System.Drawing.Point(154, 65);
+            this.comboBoxAuthType.Name = "comboBoxAuthType";
+            this.comboBoxAuthType.Size = new System.Drawing.Size(264, 20);
+            this.comboBoxAuthType.TabIndex = 13;
+            this.comboBoxAuthType.SelectedIndexChanged += new System.EventHandler(this.comboBoxAuthType_SelectedIndexChanged);
             // 
-            // buttonOk
+            // textBoxPassword
             // 
-            this.buttonOk.Location = new System.Drawing.Point(276, 299);
-            this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(75, 23);
-            this.buttonOk.TabIndex = 2;
-            this.buttonOk.Text = "确定";
-            this.buttonOk.UseVisualStyleBackColor = true;
-            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
+            this.textBoxPassword.Location = new System.Drawing.Point(195, 138);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(223, 21);
+            this.textBoxPassword.TabIndex = 12;
             // 
-            // buttonCancle
+            // textBoxDbUserName
             // 
-            this.buttonCancle.Location = new System.Drawing.Point(374, 299);
-            this.buttonCancle.Name = "buttonCancle";
-            this.buttonCancle.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancle.TabIndex = 3;
-            this.buttonCancle.Text = "取消";
-            this.buttonCancle.UseVisualStyleBackColor = true;
-            this.buttonCancle.Click += new System.EventHandler(this.buttonCancle_Click);
+            this.textBoxDbUserName.Location = new System.Drawing.Point(195, 101);
+            this.textBoxDbUserName.Name = "textBoxDbUserName";
+            this.textBoxDbUserName.Size = new System.Drawing.Size(223, 21);
+            this.textBoxDbUserName.TabIndex = 11;
+            // 
+            // textBoxServerName
+            // 
+            this.textBoxServerName.Location = new System.Drawing.Point(154, 28);
+            this.textBoxServerName.Name = "textBoxServerName";
+            this.textBoxServerName.Size = new System.Drawing.Size(264, 21);
+            this.textBoxServerName.TabIndex = 10;
             // 
             // label4
             // 
@@ -135,47 +140,32 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "服务器名称(&S)：";
             // 
-            // textBoxServerName
+            // groupBox2
             // 
-            this.textBoxServerName.Location = new System.Drawing.Point(154, 28);
-            this.textBoxServerName.Name = "textBoxServerName";
-            this.textBoxServerName.Size = new System.Drawing.Size(264, 21);
-            this.textBoxServerName.TabIndex = 10;
+            this.groupBox2.Controls.Add(this.textBoxtoken);
+            this.groupBox2.Controls.Add(this.textBoxHttp);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Location = new System.Drawing.Point(12, 231);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(437, 103);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "其它配置";
             // 
-            // textBoxDbUserName
+            // textBoxtoken
             // 
-            this.textBoxDbUserName.Location = new System.Drawing.Point(195, 101);
-            this.textBoxDbUserName.Name = "textBoxDbUserName";
-            this.textBoxDbUserName.Size = new System.Drawing.Size(223, 21);
-            this.textBoxDbUserName.TabIndex = 11;
+            this.textBoxtoken.Location = new System.Drawing.Point(154, 59);
+            this.textBoxtoken.Name = "textBoxtoken";
+            this.textBoxtoken.Size = new System.Drawing.Size(264, 21);
+            this.textBoxtoken.TabIndex = 3;
             // 
-            // textBoxPassword
+            // textBoxHttp
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(195, 138);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(223, 21);
-            this.textBoxPassword.TabIndex = 12;
-            // 
-            // comboBoxAuthType
-            // 
-            this.comboBoxAuthType.FormattingEnabled = true;
-            this.comboBoxAuthType.Items.AddRange(new object[] {
-            "Windows 身份验证",
-            "SQL Server 身份验证"});
-            this.comboBoxAuthType.Location = new System.Drawing.Point(154, 65);
-            this.comboBoxAuthType.Name = "comboBoxAuthType";
-            this.comboBoxAuthType.Size = new System.Drawing.Size(264, 20);
-            this.comboBoxAuthType.TabIndex = 13;
-            this.comboBoxAuthType.SelectedIndexChanged += new System.EventHandler(this.comboBoxAuthType_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 12);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "HTTP 地址：";
+            this.textBoxHttp.Location = new System.Drawing.Point(154, 28);
+            this.textBoxHttp.Name = "textBoxHttp";
+            this.textBoxHttp.Size = new System.Drawing.Size(264, 21);
+            this.textBoxHttp.TabIndex = 2;
             // 
             // label6
             // 
@@ -186,25 +176,56 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "令牌：";
             // 
-            // textBoxHttp
+            // label5
             // 
-            this.textBoxHttp.Location = new System.Drawing.Point(154, 28);
-            this.textBoxHttp.Name = "textBoxHttp";
-            this.textBoxHttp.Size = new System.Drawing.Size(264, 21);
-            this.textBoxHttp.TabIndex = 2;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(45, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 12);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "HTTP 地址：";
             // 
-            // textBoxtoken
+            // buttonOk
             // 
-            this.textBoxtoken.Location = new System.Drawing.Point(154, 59);
-            this.textBoxtoken.Name = "textBoxtoken";
-            this.textBoxtoken.Size = new System.Drawing.Size(264, 21);
-            this.textBoxtoken.TabIndex = 3;
+            this.buttonOk.Location = new System.Drawing.Point(276, 343);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.TabIndex = 2;
+            this.buttonOk.Text = "确定";
+            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
+            // 
+            // buttonCancle
+            // 
+            this.buttonCancle.Location = new System.Drawing.Point(374, 343);
+            this.buttonCancle.Name = "buttonCancle";
+            this.buttonCancle.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancle.TabIndex = 3;
+            this.buttonCancle.Text = "取消";
+            this.buttonCancle.UseVisualStyleBackColor = true;
+            this.buttonCancle.Click += new System.EventHandler(this.buttonCancle_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(39, 180);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 12);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "数据库名称：";
+            // 
+            // textBoxDBName
+            // 
+            this.textBoxDBName.Location = new System.Drawing.Point(154, 177);
+            this.textBoxDBName.Name = "textBoxDBName";
+            this.textBoxDBName.Size = new System.Drawing.Size(264, 21);
+            this.textBoxDBName.TabIndex = 15;
             // 
             // ConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 331);
+            this.ClientSize = new System.Drawing.Size(461, 372);
             this.Controls.Add(this.buttonCancle);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.groupBox2);
@@ -241,5 +262,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxtoken;
         private System.Windows.Forms.TextBox textBoxHttp;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxDBName;
     }
 }

@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -49,6 +53,12 @@
     <Compile Include="Common\AppSetting.cs" />
     <Compile Include="Common\CreateTimer.cs" />
     <Compile Include="ConfigAppSettingHelper.cs" />
+    <Compile Include="DAL\BaseData.cs" />
+    <Compile Include="DAL\DBHelper.cs" />
+    <Compile Include="DAL\XYBillDetail.cs" />
+    <Compile Include="DAL\XYDataHelper.cs" />
+    <Compile Include="DAL\XYSaleBill.cs" />
+    <Compile Include="DoServices\DoSendDataByPost.cs" />
     <Compile Include="ProjectInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -93,9 +103,7 @@
       <Name>SSChema.Common</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DoServices\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

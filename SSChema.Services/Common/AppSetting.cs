@@ -8,11 +8,46 @@ namespace SSChema.Services.Common
     class AppSetting
     {
 
+        private static string _token = null;
+        /// <summary>
+        /// 安全令牌
+        /// </summary>
+        public static string token
+        {
+            get { return SSChema.Common.StringEncrypt.Decode(_token); }
+        }
+
+        private static string _httpurl = null;
+        /// <summary>
+        /// 提交地址
+        /// </summary>
+        public static string httpurl
+        {
+            get { return SSChema.Common.StringEncrypt.Decode(_httpurl); }
+        }
+
         private Configuration conf = null;
 
         public AppSetting()
         {
             conf = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+        }
+
+        static AppSetting()
+        {
+            if (_token == null)
+            {
+                Configuration conff = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
+                _token = conff.AppSettings.Settings["token"].Value;
+            }
+
+            if (_httpurl == null)
+            {
+                Configuration conff = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
+                _httpurl = conff.AppSettings.Settings["httpurl"].Value;
+            }
         }
 
         #region 获取 appsetting 属性

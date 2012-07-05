@@ -161,7 +161,14 @@ namespace SSChema.Controller
 
             ConfigForm form = new ConfigForm();
 
-            form.ShowDialog();
+            if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                if (sc.Status == ServiceControllerStatus.Running)
+                {
+                    StartOrStopServices();
+                    StartOrStopServices();
+                }
+            }
         }
 
         /// <summary>
@@ -173,7 +180,14 @@ namespace SSChema.Controller
         {
             TimeSetForm form = new TimeSetForm();
 
-            form.ShowDialog();
+            if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                if (sc.Status == ServiceControllerStatus.Running)
+                {
+                    StartOrStopServices();
+                    StartOrStopServices();
+                }
+            }
         }
 
         /// <summary>
