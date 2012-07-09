@@ -1,0 +1,1 @@
+installUtil SSChema.Services.exe

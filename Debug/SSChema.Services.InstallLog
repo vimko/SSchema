@@ -1035,3 +1035,31 @@ System.ComponentModel.Win32Exception: 指定的服务未安装。
    logtoconsole = 
    logfile = E:\Do\SSchema\Debug\SSChema.Services.InstallLog
    assemblypath = E:\Do\SSchema\Debug\SSChema.Services.exe
+正在卸载程序集“E:\Do\SSchema\Debug\SSChema.Services.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = E:\Do\SSchema\Debug\SSChema.Services.exe
+   logfile = E:\Do\SSchema\Debug\SSChema.Services.InstallLog
+无法读取包含 E:\Do\SSchema\Debug\SSChema.Services.exe 程序集的保存状态的文件(位于 E:\Do\SSchema\Debug\SSChema.Services.InstallState)，该文件可能已损坏。将在缺少保存信息的情况下继续卸载。
+正在移除 EventLog 源 PostSaleOrders。
+正在从系统中移除服务 PostSaleOrders...
+已成功地从系统中移除服务 PostSaleOrders。
+正在卸载程序集“E:\Do\SSchema\Debug\SSChema.Services.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = E:\Do\SSchema\Debug\SSChema.Services.exe
+   logfile = E:\Do\SSchema\Debug\SSChema.Services.InstallLog
+正在移除 EventLog 源 PostSaleOrders。
+正在从系统中移除服务 PostSaleOrders...
+已成功地从系统中移除服务 PostSaleOrders。
+正在卸载程序集“E:\Do\SSchema\Debug\SSChema.Services.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = E:\Do\SSchema\Debug\SSChema.Services.exe
+   logfile = E:\Do\SSchema\Debug\SSChema.Services.InstallLog
+正在移除 EventLog 源 PostSaleOrders。
+警告: 源 PostSaleOrders 未在本地计算机上注册。
+正在从系统中移除服务 PostSaleOrders...
+在卸载 System.ServiceProcess.ServiceInstaller 安装程序的过程中发生异常。
+System.ComponentModel.Win32Exception: 指定的服务未安装。
+在卸载的过程中发生异常。将忽略该异常并继续卸载。但是，在卸载完成之后应用程序可能未完全卸载。
